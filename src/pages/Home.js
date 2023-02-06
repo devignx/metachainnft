@@ -18,11 +18,11 @@ const Home = () => {
                     <img src={logo} className="pc w-10 md:w-14 object-contain brightness-[20]" alt="" />
                     <h1 className='turr text-xl md:text-2xl pl-3 md:pl-5 pc text-center'>Metachain</h1>
                 </div>
-                <div className='flex lg:gap-12 md:gap-8 tracking-widest uppercase pr-8 pc'>
-                    <h3 className='text-slate-400 hover:text-white turr transition-all duration-300 ease-in-out '>About</h3>
-                    <h3 className='text-slate-400 hover:text-white turr transition-all duration-300 ease-in-out '>Roadmap</h3>
-                    <h3 className='text-slate-400 hover:text-white turr transition-all duration-300 ease-in-out '>Mint</h3>
-                    <h3 className='text-slate-400 hover:text-white turr transition-all duration-300 ease-in-out '>Whitelist</h3>
+                <div className='flex lg:gap-12 md:gap-8 tracking-widest  toppp uppercase pr-8 pc'>
+                    <h3 className='text-slate-400 hover:text-white transition-all duration-300 ease-in-out '>About</h3>
+                    <h3 className='text-slate-400 hover:text-white transition-all duration-300 ease-in-out '>Roadmap</h3>
+                    <h3 className='text-slate-400 hover:text-white transition-all duration-300 ease-in-out '>Mint</h3>
+                    <h3 className='text-slate-400 hover:text-white transition-all duration-300 ease-in-out '>Whitelist</h3>
                 </div>
             </section>
 
@@ -39,7 +39,7 @@ const Home = () => {
                 <div className='h-full w-full m-auto relative text-center'>
                     <h1 className='text-2xl md:text-4xl turr font-extrabold'>The Future is <span className='textgrad'>NOW!</span></h1>
                     <h2 className='w-10/12 md:w-[50%] m-auto md:text-lg mt-6 text-slate-400 md:leading-loose font-light'>Metachain is a platform that aims to create a virtual shared space called the Metaverse. In this space, users can interact with each other and digital objects in a 3D environment and..... </h2>   
-                    <a href='/' className='bg-white text-black m-auto text-sm backdrop-blur-xl hover:bg-white/90 transition-all duration-300 ease-in-out text-ms md:text-lg tracking-wide turr font-bold uppercase px-10 py-3 md:py-4 mt-12 md:mt-8 block w-fit rounded-full'>Read More</a>
+                    <a href='/' className='bg-white/90 text-black m-auto text-sm backdrop-blur-xl hover:bg-white transition-all duration-300 ease-in-out text-sm font-bold uppercase px-10 py-3 md:py-4 mt-12 md:mt-8 block w-fit rounded-full'>Learn More</a>
                 </div>
                 
                 <img className='mix-blend-overlay absolute bottt h-screen -bottom-[40%] md:-bottom-16 centerh ' src={circ} />
