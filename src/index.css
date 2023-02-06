@@ -17,7 +17,7 @@ html img{
 body {  
   margin: 0;
   padding: 0;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Bellota Text', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #15101b;
@@ -25,7 +25,7 @@ body {
 }
 
 .turr{
-  font-family: 'Turret Road';
+  font-family: 'Zen Dots';
 }
 
 /*---------------HP Classics---------------*/
