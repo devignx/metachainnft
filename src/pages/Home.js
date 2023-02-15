@@ -2,7 +2,7 @@ import logo from '../assets/logo.webp'
 import img1 from '../assets/img1.webp'
 import abst from '../assets/abst.webp'
 import circ from '../assets/circle.svg'
-
+import { motion } from 'framer-motion'
 
 import it1 from '../assets/nfts/nft (1).webp'
 import it2 from '../assets/nfts/nft (2).webp'
@@ -12,6 +12,20 @@ import it5 from '../assets/nfts/nft (5).webp'
 
 
 const Home = () => {
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+          opacity: 1,
+          transition: {
+            staggerChildren: 0.2,
+          },
+        },
+      };
+      const item = {
+        hidden: { opacity: 0, y: 20 },
+        show: { opacity: 1, y: 0 },
+      };
+
     return (
         <div className="text-white">
 
@@ -19,20 +33,20 @@ const Home = () => {
         <div class="opacity-40 w-[200px] md:w-[350px] h-[350px] bg-white mix-blend-overlay rounded-full blur-[140px] bottt top-[35%] right-0 absolute "></div>
 
 
-            <section id='nav' className='absolute flex w-full justify-center md:justify-between items-center'>
-                <div id='header' className='w-full flex  px-8 py-6 justify-start items-center'>
+            <section id='nav' className='fixed bg-white-[0.001] top-0 toppp backdrop-blur-xl flex w-full justify-center md:justify-between items-center'>
+                <a href='#home' id='header' className='w-full flex  px-8 py-6 justify-start items-center'>
                     <img src={logo} className="pc w-10 md:w-14 object-contain brightness-[20]" alt="" />
                     <h1 className='turr text-xl md:text-2xl pl-3 md:pl-5 pc text-center'>Metachain</h1>
-                </div>
+                </a>
                 <div className='flex lg:gap-12 md:gap-8 tracking-widest  toppp uppercase pr-8 pc'>
-                    <h3 className='text-slate-400 hover:text-white transition-all duration-300 ease-in-out '>About</h3>
-                    <h3 className='text-slate-400 hover:text-white transition-all duration-300 ease-in-out '>Roadmap</h3>
-                    <h3 className='text-slate-400 hover:text-white transition-all duration-300 ease-in-out '>Mint</h3>
-                    <h3 className='text-slate-400 hover:text-white transition-all duration-300 ease-in-out '>Whitelist</h3>
+                    <a href='#about' className='text-slate-400 hover:text-white transition-all duration-300 ease-in-out '>About</a>
+                    <a href='#roadmap' className='text-slate-400 hover:text-white transition-all duration-300 ease-in-out '>Roadmap</a>
+                    <a href='#mint' className='text-slate-400 hover:text-white transition-all duration-300 ease-in-out '>Mint</a>
+                    <a href='#whitelist' className='text-slate-400 hover:text-white transition-all duration-300 ease-in-out '>Whitelist</a>
                 </div>
             </section>
 
-            <section className='h-screen relative flex justify-start pb-12 flex-col overflow-hidden'>
+            <section id='home' className='h-screen relative flex justify-start pb-12 flex-col overflow-hidden'>
 
                 <div className='relative h-full mt-[5%] md:mt-[10%]'>        
                     <img className='w-[12rem] md:w-[16rem] botttt absolute brightness-[20] mix-blend-overlay -ml-[4px] centerh' alt='' src={logo}/>
@@ -79,6 +93,160 @@ const Home = () => {
                     <a href='/' className='bg-white/90 text-black m-auto text-sm backdrop-blur-xl hover:bg-white transition-all duration-300 ease-in-out text-sm font-bold uppercase px-10 py-3 md:py-4 mt-24 md:mt-16 block w-fit rounded-full'>View All</a>
             </section>
 
+            <section id='about' className='h-screen pt-24'>
+                <h1 className='text-3xl text-center turr '>About</h1>
+                <p className='text-center w-10/12 md:w-1/2 m-auto my-8 text-slate-400'>Metachain is a platform that aims to create a virtual shared space called the Metaverse. In this space, users can interact with each other and digital objects in a 3D environment and..... </p>
+            </section>
+
+            <section id='roadmap' className='pt-24'>
+                <h1 className='text-3xl text-center turr '>Roadmap</h1>
+                <p className='text-center w-10/12 md:w-1/2 m-auto my-8 text-slate-400'>Metachain is a platform that aims to create a virtual shared space called the Metaverse. In this space, users can interact with each other and digital objects in a 3D environment and..... </p>
+                <motion.div
+                    variants={container}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: false }}
+                    className="flex flex-wrap text-white     scale-[100%] md:scale-[95%] gap-4 md:gap-8  m-auto w-full md:w-10/12 justify-center items-start mt-6 md:mt-16"
+                >
+                    <motion.div className="flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4">
+                        <h2 className="font-semibold">May 2023</h2>
+                        <div className="w-[20px] h-[20px] border-white/70 border-solid border-[4px] rounded-full bg-purple-400">
+                        <br />
+                        </div>
+                        <hr />
+                        <p className="text-sm text-white/60">
+                        Metachain is a platform that aims to create a virtual shared space called the Metaverse.
+                        </p>
+                    </motion.div>
+                    <motion.div
+                        variants={item}
+                        className="flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4"
+                    >
+                        <h2 className="font-semibold">May 2023</h2>
+                        <div className="w-[35px] h-[35px] border-white/60 border-solid border-[10px] rounded-full bg-pink-500">
+                        <br />
+                        </div>
+                        <hr />
+                        <p className="text-sm text-white">
+                        Metachain is a platform that aims to create a virtual shared space called the Metaverse.
+                        </p>
+                    </motion.div>
+                    <motion.div
+                        variants={item}
+                        className="flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4"
+                    >
+                        <h2 className="font-semibold">May 2023</h2>
+                        <div className="w-[20px] h-[20px] border-white/70 border-solid border-[4px] rounded-full bg-purple-400">
+                        <br />
+                        </div>
+                        <hr />
+                        <p className="text-sm text-white/60">
+                        Metachain is a platform that aims to create a virtual shared space called the Metaverse.
+                        </p>
+                    </motion.div>
+                    <motion.div
+                        variants={item}
+                        className="flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4"
+                    >
+                        <h2 className="font-semibold">May 2023</h2>
+                        <div className="w-[20px] h-[20px] border-white/70 border-solid border-[4px] rounded-full bg-purple-400">
+                        <br />
+                        </div>
+                        <hr />
+                        <p className="text-sm text-white/60">
+                        Metachain is a platform that aims to create a virtual shared space called the Metaverse.
+                        </p>
+                    </motion.div>
+                    <motion.div
+                        variants={item}
+                        className="flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4"
+                    >
+                        <h2 className="font-semibold">May 2023</h2>
+                        <div className="w-[20px] h-[20px] border-white/70 border-solid border-[4px] rounded-full bg-purple-400">
+                        <br />
+                        </div>
+                        <hr />
+                        <p className="text-sm text-white/60">
+                        Metachain is a platform that aims to create a virtual shared space called the Metaverse.
+                        </p>
+                    </motion.div>
+                    <motion.div
+                        variants={item}
+                        className="flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4"
+                    >
+                        <h2 className="font-semibold">May 2023</h2>
+                        <div className="w-[20px] h-[20px] border-white/70 border-solid border-[4px] rounded-full bg-purple-400">
+                        <br />
+                        </div>
+                        <hr />
+                        <p className="text-sm text-white/60">
+                        Metachain is a platform that aims to create a virtual shared space called the Metaverse.
+                        </p>
+                    </motion.div>
+                    <motion.div
+                        variants={item}
+                        className="flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4"
+                    >
+                        <h2 className="font-semibold">May 2023</h2>
+                        <div className="w-[20px] h-[20px] border-white/70 border-solid border-[4px] rounded-full bg-purple-400">
+                        <br />
+                        </div>
+                        <hr />
+                        <p className="text-sm text-white/60">
+                        Metachain is a platform that aims to create a virtual shared space called the Metaverse.
+                        </p>
+                    </motion.div>
+                    <motion.div
+                        variants={item}
+                        className="flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4"
+                    >
+                        <h2 className="font-semibold">May 2023</h2>
+                        <div className="w-[20px] h-[20px] border-white/70 border-solid border-[4px] rounded-full bg-purple-400">
+                        <br />
+                        </div>
+                        <hr />
+                        <p className="text-sm text-white/60">
+                        Metachain is a platform that aims to create a virtual shared space called the Metaverse.
+                        </p>
+                    </motion.div>
+                    <motion.div
+                        variants={item}
+                        className="flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4"
+                    >
+                        <h2 className="font-semibold">May 2023</h2>
+                        <div className="w-[20px] h-[20px] border-white/70 border-solid border-[4px] rounded-full bg-purple-400">
+                        <br />
+                        </div>
+                        <hr />
+                        <p className="text-sm text-white/60">
+                        Metachain is a platform that aims to create a virtual shared space called the Metaverse.
+                        </p>
+                    </motion.div>
+                    <motion.div
+                        variants={item}
+                        className="flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4"
+                    >
+                        <h2 className="font-semibold">May 2023</h2>
+                        <div className="w-[20px] h-[20px] border-white/70 border-solid border-[4px] rounded-full bg-purple-400">
+                        <br />
+                        </div>
+                        <hr />
+                        <p className="text-sm text-white/60">
+                        Metachain is a platform that aims to create a virtual shared space called the Metaverse.
+                        </p>
+                    </motion.div>
+                </motion.div>
+            </section>
+            
+            <section id='mint' className='h-screen pt-24'>
+                <h1 className='text-3xl text-center turr '>Mint</h1>
+                <p className='text-center w-10/12 md:w-1/2 m-auto my-8 text-slate-400'>Metachain is a platform that aims to create a virtual shared space called the Metaverse. In this space, users can interact with each other and digital objects in a 3D environment and..... </p>
+            </section>
+
+            <section id='whitelist' className='h-screen pt-24'>
+                <h1 className='text-3xl text-center turr '>Whitelist</h1>
+                <p className='text-center w-10/12 md:w-1/2 m-auto my-8 text-slate-400'>Metachain is a platform that aims to create a virtual shared space called the Metaverse. In this space, users can interact with each other and digital objects in a 3D environment and..... </p>
+            </section>
 
         </div>
     )

@@ -24,6 +24,13 @@ body {
   scroll-behavior: smooth;
 }
 
+hr {
+  height:2.5rem;
+  width: 1px;
+  border:0.7px solid rgba(255, 255, 255, 0.394);
+}
+
+
 .turr{
   font-family: 'Zen Dots';
 }
