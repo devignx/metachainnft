@@ -28,6 +28,10 @@ body {
   font-family: 'Zen Dots';
 }
 
+.shad{
+  box-shadow: 0px 1.13254px 28.3135px rgba(213, 104, 255, 0.5), inset 0px 8.2109px 42.4702px rgba(213, 104, 255, 0.8);
+}
+
 /*---------------HP Classics---------------*/
 
 

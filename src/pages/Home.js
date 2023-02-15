@@ -4,6 +4,12 @@ import abst from '../assets/abst.webp'
 import circ from '../assets/circle.svg'
 
 
+import it1 from '../assets/nfts/nft (1).webp'
+import it2 from '../assets/nfts/nft (2).webp'
+import it6 from '../assets/nfts/nft (6).webp'
+import it4 from '../assets/nfts/nft (4).webp'
+import it5 from '../assets/nfts/nft (5).webp'
+
 
 const Home = () => {
     return (
@@ -45,10 +51,32 @@ const Home = () => {
                 <img className='mix-blend-overlay absolute bottt h-screen -bottom-[40%] md:-bottom-16 centerh ' src={circ} />
             </section>
 
-            <section>
-                <h1 className='text-3xl text-center turr mt-16 '>About</h1>
+            <section className='my-16'>
+                <h1 className='text-3xl text-center turr '>NFTs</h1>
                 <p className='text-center w-10/12 md:w-1/2 m-auto my-8 text-slate-400'>Metachain is a platform that aims to create a virtual shared space called the Metaverse. In this space, users can interact with each other and digital objects in a 3D environment and..... </p>
-
+                <div className='m-auto w-full mt-[4rem] md:mt-[8rem] scale-[55%] md:scale-[65%] lg:scale-[85%] h-full flex items-center gap-12 justify-center'>
+                    <div className='bg-white relative h-[10rem] w-[15rem] rounded-[1.5rem] p-5 py-8 shad overflow-visible shrink-0 flex flex-col justify-end'>
+                        <img className='rounded-full border-[7px] border-white border-solid centerh absolute -top-[4.5rem] w-[9rem] ' src={it1} />
+                        <h1 className='font-bold  text-center turr text-3xl text-black'>123</h1>
+                    </div>
+                    <div className='bg-white relative h-[10rem] w-[15rem] rounded-[1.5rem] p-5 py-8 shad overflow-visible shrink-0 flex flex-col justify-end'>
+                        <img className='rounded-full border-[7px] border-white border-solid centerh absolute -top-[4.5rem] w-[9rem] ' src={it4} />
+                        <h1 className='font-bold  text-center turr text-3xl text-black'>123</h1>
+                    </div>
+                    <div className='bg-white relative h-[10rem] w-[15rem] rounded-[1.5rem] p-5 py-8 shad overflow-visible shrink-0 flex flex-col justify-end'>
+                        <img className='rounded-full border-[7px] border-white border-solid centerh absolute -top-[4.5rem] w-[9rem] ' src={it2} />
+                        <h1 className='font-bold  text-center turr text-3xl text-black'>123</h1>
+                    </div>
+                    <div className='bg-white relative h-[10rem] w-[15rem] rounded-[1.5rem] p-5 py-8 shad overflow-visible shrink-0 flex flex-col justify-end'>
+                        <img className='rounded-full border-[7px] border-white border-solid centerh absolute -top-[4.5rem] w-[9rem] ' src={it5} />
+                        <h1 className='font-bold  text-center turr text-3xl text-black'>123</h1>
+                    </div>
+                    <div className='bg-white relative h-[10rem] w-[15rem] rounded-[1.5rem] p-5 py-8 shad overflow-visible shrink-0 flex flex-col justify-end'>
+                        <img className='rounded-full border-[7px] border-white border-solid centerh absolute -top-[4.5rem] w-[9rem] ' src={it6} />
+                        <h1 className='font-bold  text-center turr text-3xl text-black'>123</h1>
+                    </div>
+                </div> 
+                    <a href='/' className='bg-white/90 text-black m-auto text-sm backdrop-blur-xl hover:bg-white transition-all duration-300 ease-in-out text-sm font-bold uppercase px-10 py-3 md:py-4 mt-24 md:mt-16 block w-fit rounded-full'>View All</a>
             </section>
 
 
