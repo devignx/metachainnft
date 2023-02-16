@@ -10,8 +10,19 @@ import it6 from '../assets/nfts/nft (6).webp'
 import it4 from '../assets/nfts/nft (4).webp'
 import it5 from '../assets/nfts/nft (5).webp'
 
+import { useState } from 'react'
 
 const Home = () => {
+    
+    const [popup,setPop] = useState(false);
+    
+    const handleClickOpen = () => {
+        setPop(!popup);
+    }
+    const closePopup = () => {
+        setPop(!popup);
+    }
+
     const container = {
         hidden: { opacity: 0 },
         show: {
@@ -28,6 +39,16 @@ const Home = () => {
 
     return (
         <div className="text-white">
+
+        <div  onClick={closePopup} className='fixed cursor-pointer topppp'>
+            { popup?
+                <div className="fixed justify-center items-center text-xs centerh md:text-lg bottom-10 flex flex-row-reverse md:flex-row gap-4 w-10/12 md:w-auto md:right-12 border-[3px] topppp drop-shadow-lg shad border-red-400 bg-white rounded-xl p-5">
+                    <button onClick={closePopup} className="p-3 py-2 md:py-1 rounded-full bg-red-400 toppp text-white">x</button>
+                    <p className='topppp text-black'>Going Live Sooner than you anticipate 😉</p>
+                <div className='w-screen h-screen scale-[125%] bottom-0 bg-white/[0.01] backdrop-blur-lg cursor-pointer absolute'></div>
+                </div>
+            :""}
+        </div>
 
         <div class="opacity-40 w-[200px] md:w-[350px] h-[350px] bg-white mix-blend-overlay rounded-full blur-[140px] bottt top-[35%] left-0 absolute "></div>
         <div class="opacity-40 w-[200px] md:w-[350px] h-[350px] bg-white mix-blend-overlay rounded-full blur-[140px] bottt top-[35%] right-0 absolute "></div>
@@ -59,7 +80,7 @@ const Home = () => {
                 <div className='h-full w-full m-auto relative text-center'>
                     <h1 className='text-2xl md:text-4xl turr font-extrabold'>The Future is <span className='textgrad'>NOW!</span></h1>
                     <h2 className='w-10/12 md:w-[50%] m-auto md:text-lg mt-6 text-slate-400 md:leading-loose font-light'>Metachain is a platform that aims to create a virtual shared space called the Metaverse. In this space, users can interact with each other and digital objects in a 3D environment and..... </h2>   
-                    <a href='/' className='bg-white/90 text-black m-auto text-sm backdrop-blur-xl hover:bg-white transition-all duration-300 ease-in-out text-sm font-bold uppercase px-10 py-3 md:py-4 mt-12 md:mt-8 block w-fit rounded-full'>Learn More</a>
+                    <a onClick={handleClickOpen} className='bg-white/90 text-black m-auto text-sm backdrop-blur-xl hover:bg-white transition-all duration-300 ease-in-out text-sm font-bold uppercase px-10 py-3 md:py-4 mt-12 md:mt-8 block w-fit rounded-full'>Learn More</a>
                 </div>
                 
                 <img className='mix-blend-overlay absolute bottt h-screen -bottom-[40%] md:-bottom-16 centerh ' src={circ} />
@@ -90,7 +111,7 @@ const Home = () => {
                         <h1 className='font-bold  text-center turr text-3xl text-black'>123</h1>
                     </div>
                 </div> 
-                    <a href='/' className='bg-white/90 text-black m-auto text-sm backdrop-blur-xl hover:bg-white transition-all duration-300 ease-in-out text-sm font-bold uppercase px-10 py-3 md:py-4 mt-24 md:mt-16 block w-fit rounded-full'>View All</a>
+                    <a onClick={handleClickOpen} className='bg-white/90 text-black m-auto text-sm backdrop-blur-xl hover:bg-white transition-all duration-300 ease-in-out text-sm font-bold uppercase px-10 py-3 md:py-4 mt-24 md:mt-16 block w-fit rounded-full'>View All</a>
             </section>
 
             <section id='about' className='h-screen pt-24'>
@@ -102,11 +123,12 @@ const Home = () => {
                 <h1 className='text-3xl text-center turr '>Roadmap</h1>
                 <p className='text-center w-10/12 md:w-1/2 m-auto my-8 text-slate-400'>Metachain is a platform that aims to create a virtual shared space called the Metaverse. In this space, users can interact with each other and digital objects in a 3D environment and..... </p>
                 <motion.div
+                    onClick={handleClickOpen}
                     variants={container}
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: false }}
-                    className="flex flex-wrap text-white     scale-[100%] md:scale-[95%] gap-4 md:gap-8  m-auto w-full md:w-10/12 justify-center items-start mt-6 md:mt-16"
+                    className="flex flex-wrap text-white cursor-pointer scale-[100%] md:scale-[95%] gap-4 md:gap-8  m-auto w-full md:w-10/12 justify-center items-start mt-6 md:mt-16"
                 >
                     <motion.div className="flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4">
                         <h2 className="font-semibold">May 2023</h2>
