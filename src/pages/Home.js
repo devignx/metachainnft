@@ -80,7 +80,7 @@ const Home = () => {
                 <div className='h-full w-full m-auto relative text-center'>
                     <h1 className='text-2xl md:text-4xl turr font-extrabold'>The Future is <span className='textgrad'>NOW!</span></h1>
                     <h2 className='w-10/12 md:w-[50%] m-auto md:text-lg mt-6 text-slate-400 md:leading-loose font-light'>Metachain is a platform that aims to create a virtual shared space called the Metaverse. In this space, users can interact with each other and digital objects in a 3D environment and..... </h2>   
-                    <a onClick={handleClickOpen} className='bg-white/90 text-black m-auto text-sm backdrop-blur-xl hover:bg-white transition-all duration-300 ease-in-out text-sm font-bold uppercase px-10 py-3 md:py-4 mt-12 md:mt-8 block w-fit rounded-full'>Learn More</a>
+                    <a onClick={handleClickOpen} className='bg-white/90 cursor-pointer text-black m-auto text-sm backdrop-blur-xl hover:bg-white transition-all duration-300 ease-in-out text-sm font-bold uppercase px-10 py-3 md:py-4 mt-12 md:mt-8 block w-fit rounded-full'>Learn More</a>
                 </div>
                 
                 <img className='mix-blend-overlay absolute bottt h-screen -bottom-[40%] md:-bottom-16 centerh ' src={circ} />
@@ -89,29 +89,29 @@ const Home = () => {
             <section id='nft' className='my-16'>
                 <h1 className='text-3xl text-center turr '>NFTs</h1>
                 <p className='text-center w-10/12 md:w-1/2 m-auto my-8 text-slate-400'>Metachain is a platform that aims to create a virtual shared space called the Metaverse. In this space, users can interact with each other and digital objects in a 3D environment and..... </p>
-                <div className='m-auto w-full overflow-x-scroll py-24 mt-[4rem] md:scale-[65%] lg:scale-[85%] h-full flex items-center gap-12 justify-start scroll-px-8'>
+                <div onClick={handleClickOpen} className='m-auto w-full overflow-x-scroll py-24 mt-[4rem] md:scale-[65%] lg:scale-[85%] h-full flex items-center gap-12 justify-start scroll-px-8'>
                     <div className='bg-white relative h-[10rem] w-[15rem] rounded-[1.5rem] p-5 py-8 shad overflow-visible shrink-0 flex flex-col justify-end'>
-                        <img className='rounded-full border-[7px] border-white border-solid centerh absolute -top-[4.5rem] w-[9rem] ' src={it1} />
+                        <img className='rounded-full border-[7px] border-white border-solid centerh absolute -top-[4.5rem] w-[9rem] ' alt='' src={it1} />
                         <h1 className='font-bold  text-center turr text-3xl text-black'>123</h1>
                     </div>
                     <div className='bg-white relative h-[10rem] w-[15rem] rounded-[1.5rem] p-5 py-8 shad overflow-visible shrink-0 flex flex-col justify-end'>
-                        <img className='rounded-full border-[7px] border-white border-solid centerh absolute -top-[4.5rem] w-[9rem] ' src={it4} />
+                        <img className='rounded-full border-[7px] border-white border-solid centerh absolute -top-[4.5rem] w-[9rem] ' alt='' src={it4} />
                         <h1 className='font-bold  text-center turr text-3xl text-black'>123</h1>
                     </div>
                     <div className='bg-white relative h-[10rem] w-[15rem] rounded-[1.5rem] p-5 py-8 shad overflow-visible shrink-0 flex flex-col justify-end'>
-                        <img className='rounded-full border-[7px] border-white border-solid centerh absolute -top-[4.5rem] w-[9rem] ' src={it2} />
+                        <img className='rounded-full border-[7px] border-white border-solid centerh absolute -top-[4.5rem] w-[9rem] ' alt='' src={it2} />
                         <h1 className='font-bold  text-center turr text-3xl text-black'>123</h1>
                     </div>
                     <div className='bg-white relative h-[10rem] w-[15rem] rounded-[1.5rem] p-5 py-8 shad overflow-visible shrink-0 flex flex-col justify-end'>
-                        <img className='rounded-full border-[7px] border-white border-solid centerh absolute -top-[4.5rem] w-[9rem] ' src={it5} />
+                        <img className='rounded-full border-[7px] border-white border-solid centerh absolute -top-[4.5rem] w-[9rem] ' alt='' src={it5} />
                         <h1 className='font-bold  text-center turr text-3xl text-black'>123</h1>
                     </div>
                     <div className='bg-white relative h-[10rem] w-[15rem] rounded-[1.5rem] p-5 py-8 shad overflow-visible shrink-0 flex flex-col justify-end'>
-                        <img className='rounded-full border-[7px] border-white border-solid centerh absolute -top-[4.5rem] w-[9rem] ' src={it6} />
+                        <img className='rounded-full border-[7px] border-white border-solid centerh absolute -top-[4.5rem] w-[9rem] ' alt='' src={it6} />
                         <h1 className='font-bold  text-center turr text-3xl text-black'>123</h1>
                     </div>
                 </div> 
-                    <a onClick={handleClickOpen} className='bg-white/90 text-black m-auto text-sm backdrop-blur-xl hover:bg-white transition-all duration-300 ease-in-out text-sm font-bold uppercase px-10 py-3 md:py-4 mt-24 md:mt-16 block w-fit rounded-full'>View All</a>
+                    <a onClick={handleClickOpen} className='bg-white/90 cursor-pointer text-black m-auto text-sm backdrop-blur-xl hover:bg-white transition-all duration-300 ease-in-out text-sm font-bold uppercase px-10 py-3 md:py-4 mt-24 md:mt-16 block w-fit rounded-full'>View All</a>
             </section>
 
             <section id='about' className='h-screen pt-24'>
@@ -263,11 +263,13 @@ const Home = () => {
             <section id='mint' className='h-screen pt-24'>
                 <h1 className='text-3xl text-center turr '>Mint</h1>
                 <p className='text-center w-10/12 md:w-1/2 m-auto my-8 text-slate-400'>Metachain is a platform that aims to create a virtual shared space called the Metaverse. In this space, users can interact with each other and digital objects in a 3D environment and..... </p>
+                <a onClick={handleClickOpen} className='bg-white/90 cursor-pointer text-black m-auto text-sm backdrop-blur-xl hover:bg-white transition-all duration-300 ease-in-out text-sm font-bold uppercase px-10 py-3 md:py-4 mt-24 md:mt-16 block w-fit rounded-full'>Know more</a>
             </section>
 
             <section id='whitelist' className='h-screen pt-24'>
                 <h1 className='text-3xl text-center turr '>Whitelist</h1>
                 <p className='text-center w-10/12 md:w-1/2 m-auto my-8 text-slate-400'>Metachain is a platform that aims to create a virtual shared space called the Metaverse. In this space, users can interact with each other and digital objects in a 3D environment and..... </p>
+                <a onClick={handleClickOpen} className='bg-white/90 cursor-pointer text-black m-auto text-sm backdrop-blur-xl hover:bg-white transition-all duration-300 ease-in-out text-sm font-bold uppercase px-10 py-3 md:py-4 mt-24 md:mt-16 block w-fit rounded-full'>Know more</a>
             </section>
 
         </div>
